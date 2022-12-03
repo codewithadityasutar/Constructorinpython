@@ -1,0 +1,40 @@
+'''In this program constructor and its type
+   there are 3 types '''
+# 1)default constructor
+class student:
+    def show(self):
+        print("This student class ")
+#(object_name=class_name)this is object syntax
+s=student()
+s.show()
+
+#2)Non parameterized constructor
+print("......................................................")
+class student:
+    def __init__(self):
+        """In __init__ methos is constructor without parameter that is
+           non parameterized constructor"""
+        print("Non parameterized constructor call")
+    def show(self,name):
+        print("Student name is ",name)
+s1=student()
+s1.show("Aditya")
+#note: the create object of class automatic call constructor
+print("......................................................")
+#3)Parameterized constructor
+class Employee:
+    def __init__(self,eid,ename):
+        """In this method we pass the argument in
+           constructor"""
+        #Below code, self.eid is instance variable and eid is local variable   
+        self.eid=eid
+        self.ename=ename
+        
+    def show(self):
+        print("Id of employee is ",self.eid)
+        print("Name of employee is ",self.ename)
+
+Emp=Employee(1,"Aditya")
+Emp1=Employee(2,"Ram") 
+# another call paramterized constructor we again create object of class
+Emp.show()  
